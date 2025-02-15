@@ -58,7 +58,7 @@ MEMORY_DB_PATH=/path/to/your/dabatase.sqlite
 
 ### Basic Usage
 
-Use @mcp.resource and @mcp.tool decorated functions in the memory_plugin.py file
+Refer to the @mcp.resource and @mcp.tool decorated functions in the memory_plugin.py file
 
 Examples to type in the chat: 
 
