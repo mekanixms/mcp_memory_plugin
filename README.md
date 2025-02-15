@@ -37,7 +37,7 @@ Windows: C:\Users\<username>\AppData\Roaming\Claude\claude_desktop_config.json
 {
   "mcpServers": {
     "memory_recall": {
-      "command": "/Volumes/SamPM991/AnaConda/anaconda3/bin/python3.12",
+      "command": "/path/to/python3",
       "args": [
         "/path/2/your/cloned/repository/memory_plugin.py"
       ]
