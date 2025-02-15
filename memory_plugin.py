@@ -15,7 +15,7 @@ ENV_DB_PATH = os.getenv('MEMORY_DB_PATH')
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DB_PATH = ENV_DB_PATH if ENV_DB_PATH else os.path.join(SCRIPT_DIR, 'memory.db')
+DB_PATH = ENV_DB_PATH if os.path.exists(os.path.abspath(ENV_DB_PATH)) else os.path.join(SCRIPT_DIR, 'memory.db')
 
 @dataclass
 class MemoryContext:
