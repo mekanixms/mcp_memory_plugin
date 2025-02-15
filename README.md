@@ -62,9 +62,9 @@ Use @mcp.resource and @mcp.tool decorated functions in the memory_plugin.py file
 
 Examples to type in the chat: 
 
-   memory://load to load the saved memories at new chat start
-   Save into the memory, under aNewName catagory, the following: a new message twith important info to remember
-   Save the relevant points of the conversation into the memory under aNewName category
+* `memory://load` to load the saved memories at new chat start
+* `Save into the memory, under aNewName category, the following: a new message with important info to remember`
+* `Save the relevant points of the conversation into the memory under aNewName category`
 
 ## Development
 
