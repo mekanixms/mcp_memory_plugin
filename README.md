@@ -25,21 +25,33 @@ This plugin provides memory storage functionality using SQLite as the backend da
 
    The project requires Python and uses SQLite for data storage. Make sure you have Python installed on your system.
 
-## Files
-
-- `memory_plugin.py` - Main plugin implementation
-- `.env` - Environment configuration file
-- `.env.example` - Template for environment configuration
-- `.gitignore` - Specifies which files Git should ignore
-
 ## Configuration
+
+1. rename .env.example to .env and edit the values to your needs:
+
+2. Locate claude_desktop_config.json and use the template below to add "MQTT Bridge" to the mcpServers section.
+MacOs: ~/Library/Application Support/Claude/claude_desktop_config.json
+Windows: C:\Users\<username>\AppData\Roaming\Claude\claude_desktop_config.json
+  
+```json
+{
+  "mcpServers": {
+    "memory_recall": {
+      "command": "/Volumes/SamPM991/AnaConda/anaconda3/bin/python3.12",
+      "args": [
+        "/path/2/your/cloned/repository/memory_plugin.py"
+      ]
+    }
+  }
+}
+```
 
 The SQLite database path is configured through the `MEMORY_DB_PATH` environment variable. This should point to where you want the SQLite database file to be stored.
 
 Current configuration:
 
 ```
-MEMORY_DB_PATH=/Volumes/Orico/ClaudeMCP-FS-Folder/memory.sqlite
+MEMORY_DB_PATH=/path/to/your/dabatase.sqlite
 ```
 
 ## Usage
@@ -50,9 +62,9 @@ Use @mcp.resource and @mcp.tool decorated functions in the memory_plugin.py file
 
 Examples to type in the chat: 
 
-memory://load to load the saved memories at new chat start
-Save into the memory, under aNewName catagory, the following: a new message twith important info to remember
-Save the relevant points of the conversation into the memory under aNewName category
+   memory://load to load the saved memories at new chat start
+   Save into the memory, under aNewName catagory, the following: a new message twith important info to remember
+   Save the relevant points of the conversation into the memory under aNewName category
 
 ## Development
 
